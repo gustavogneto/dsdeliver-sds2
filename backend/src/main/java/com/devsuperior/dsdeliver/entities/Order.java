@@ -34,7 +34,7 @@ public class Order implements Serializable {
 	@JoinTable(name = "tb_order_product", 
 	joinColumns = @JoinColumn(name = "order_id") ,
 	inverseJoinColumns =  @JoinColumn(name = "product_id"))	
-	private Set<Product> product = new HashSet<>();
+	private Set<Product> products = new HashSet<>();
 	
 	public Order(){}
 
@@ -58,7 +58,7 @@ public class Order implements Serializable {
 		this.id = id;
 	}
 
-	public String getAdress() {
+	public String getAddress() {
 		return address;
 	}
 
@@ -99,17 +99,23 @@ public class Order implements Serializable {
 	}
 
 	public Double getTotal() {
-		return total;
+		Double sum = 0.0;
+		for(Product p : products) {
+			sum += p.getPrice();
+		}
+		return sum;
 	}
 
 	public void setTotal(Double total) {
 		this.total = total;
 	}
 
-	public Set<Product> getProduct() {
-		return product;
+	
+	public Set<Product> getProducts() {
+		return products;
 	}
-
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
