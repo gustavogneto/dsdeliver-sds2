@@ -1,14 +1,10 @@
 import './App.css';
-import Hello from './Hello';
-import Counter from './Counter';
-   /**Componente */
+import Navbar from './Navbar';
+
 function App() {
   return (
     <div>
-      <Counter />
-     <Hello message="Gustavo Gomes"/> 
-     <Hello message="marquer"/> 
-     <Hello message="lust"/>
+ <Navbar/>
     </div>
   );
 }
