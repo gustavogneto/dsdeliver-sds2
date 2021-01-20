@@ -1,3 +1,4 @@
+import ProductsList from './ProductsList';
 import StepsHeader from './StepsHeader';
 import './styles.css';
 
@@ -6,6 +7,7 @@ function Orders(){
       <div className="orders-container">
          
           <StepsHeader />
+          <ProductsList />
           
           </div>
     )
