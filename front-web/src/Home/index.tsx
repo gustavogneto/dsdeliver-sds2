@@ -1,5 +1,3 @@
-import { isValidElement } from 'react';
-import Navbar from '../Navbar';
 import './styles.css';
 import { ReactComponent as MainImage } from './main.svg';
 import Footer from '../Footer';

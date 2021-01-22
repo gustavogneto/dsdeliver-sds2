@@ -1,4 +1,3 @@
-import { type } from "os";
 import { checkIsSelected } from "./Helpers";
 import ProductCard from "./ProductCard";
 import { Product } from "./types";
