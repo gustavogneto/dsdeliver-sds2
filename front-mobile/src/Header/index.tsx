@@ -5,6 +5,7 @@ import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 
 export default function Header() {
+    
     const navigation = useNavigation();
 
     const handleOnPress = () => {
