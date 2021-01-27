@@ -2,8 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 
 
-const API_URL = 'https://delivernew.herokuapp.com'
-const mapboxToken = process.env.REACT_APP_ACCESS_TOKEN_MAP_BOX
+const API_URL = process.env.REACT_APP_API_URL
 
 export function fetchOrders(){
     
