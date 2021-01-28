@@ -35,12 +35,12 @@ export default function OrderDetails({ route }: Props) {
         })
     }
 
-    const handleStartNavigation = () => {
-        Linking.openURL(`https://www.google.com/maps/dir/?api=1
-        &travelmode=driving&
-        dir_action=navigate&
-        destination=${order.latitude},
-        ${order.longitude}`)
+    const handleStartNavigationGoogle = () => {
+        Linking.openURL(`https://www.google.com/maps/dir/?api=1&travelmode=driving&dir_action=navigate&destination=${order.latitude},${order.longitude}`)
+    }
+
+    const handleStartNavigationWaze = () => {
+        Linking.openURL(`https://www.waze.com/ul?ll=${order.latitude}%2C${order.longitude}&navigate=yes&zoom=17$`)
     }
     return (
         <>
@@ -49,7 +49,11 @@ export default function OrderDetails({ route }: Props) {
             
             <OrderCard order={order} />
             <RectButton style={styles.button}>
-                <Text style={styles.buttonText} onPress={handleStartNavigation}>INICIAR NAVEGAÇÃO</Text>
+                <Text style={styles.buttonText} onPress={handleStartNavigationGoogle}>INICIAR NAVEGAÇÃO GOOGLE</Text>
+
+            </RectButton>
+            <RectButton style={styles.button}>
+                <Text style={styles.buttonText} onPress={handleStartNavigationWaze}>INICIAR NAVEGAÇÃO WAZE</Text>
 
             </RectButton>
             <RectButton style={styles.button}>
