@@ -10,14 +10,6 @@ import javassist.tools.rmi.ObjectNotFoundException;
 @Service
 public class EventosService {
 	
-	@Autowired	
-	private EventRepository repo;
-	
-	public Eventos find(Integer id) throws ObjectNotFoundException {
-		 Optional<Eventos> obj = repo.findById(id);
-		return obj.orElseThrow(() -> new ObjectNotFoundException(
-		 "Objeto não encontrado! Id: " + id + ", Tipo: " + Eventos.class.getName()));
-		} 
 
 	
 
